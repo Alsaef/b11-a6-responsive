@@ -68,7 +68,7 @@ const dataShow=(words)=>{
     words.forEach(word => {
         const lessionSection=document.createElement('div')
         lessionSection.innerHTML=`
-        <div class="card bg-base-100 card-lg shadow-sm h-[220px]">
+        <div class="card bg-base-100 card-lg shadow-sm lg:h-[220px] h-full">
         <div class="card-body py-4">
          <div class=" text-center">
             <h2 class="text-2xl font-bold py-3">${word.word}</h2>
@@ -134,7 +134,7 @@ const loppingfetchSingleData=(word)=>{
             </div>
             <div class="mt-3">
               <p class="font-semibold">সমার্থক শব্দ গুলো</p>
-              <div class="flex gap-2 mt-1">
+              <div class="flex flex-wrap gap-2 mt-1">
 
               ${word.synonyms?.map(sy => `<span class="btn">${sy}</span>`).join('')}
               
